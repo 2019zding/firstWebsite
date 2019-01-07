@@ -1,11 +1,16 @@
 Rails.application.routes.draw do
+  resources :posts
+  devise_for :users
+  resources :pages
   root 'static_pages#home'
 
-  get 'about', to: 'static_pages#about'
+  get 'page', to: 'static_pages#page'
 
-  get 'contact', to: 'static_pages#contact'
+  get 'page2', to: 'static_pages#page2'
 
-  get 'personalInterests', to: 'static_pages#personalInterests'
+  get 'page3', to: 'static_pages#page3'
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
+
+

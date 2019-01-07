@@ -1,0 +1,30 @@
+<!-- <h1>StaticPages#page3</h1>
+<p>Find me in app/views/static_pages/page3.html.erb</p> -->
+<section class= 'backgroundA'>
+<section class="navigation">
+  <div class="nav-container">
+    <div class="brand">
+    </div>
+    <nav>
+      <div class="nav-mobile">
+        <a id="nav-toggle" href="#!"><span></span></a>
+      </div>
+      <ul class="nav-list">
+        <!-- Setting the links to #! will ensure that no action takes place on click. -->
+        <li><a href="/#home">Home</a></li>
+        <li><a href="/page">Middle School</a></li>
+        <li><a href="/page2">High School</a></li>
+        <li><a href="#page3">Administration Login</a></li>
+      </ul>
+    </nav>
+  </div>
+</section>
+
+<% if current_user %>
+<%= link_to 'Sign out', destroy_user_session_path, method: :delete %>
+<% else %>
+<%= link_to 'Sign up', new_user_registration_path %>
+<%= link_to 'Sign in', new_user_session_path %>
+<% end %>
+
+</section>
